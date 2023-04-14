@@ -1,0 +1,255 @@
+{
+    "type": "bubble",
+    "size": "mega",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "CTW",
+          "wrap": true,
+          "align": "center",
+          "weight": "bold",
+          "size": "24px",
+          "color": "#231F20"
+        }
+      ]
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Game",
+          "size": "18px",
+          "color": "#231F20",
+          "weight": "bold"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Reply #2",
+              "flex": 2,
+              "color": "#504E55cc",
+              "size": "13.5px"
+            },
+            {
+              "type": "text",
+              "text": "19 hours ago",
+              "flex": 3,
+              "align": "end",
+              "color": "#504E55cc",
+              "size": "13.5px"
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": ">",
+                  "flex": 1,
+                  "align": "center",
+                  "color": "#231F2099",
+                  "size": "16px"
+                },
+                {
+                  "type": "text",
+                  "text": "ห้องน้ำโซนโรงหนังคับ อยากโดนs kใหญ่คับผม",
+                  "flex": 9,
+                  "color": "#231F2099",
+                  "wrap": true,
+                  "size": "16px"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": ">",
+                  "flex": 1,
+                  "align": "center",
+                  "color": "#231F2099",
+                  "size": "16px"
+                },
+                {
+                  "type": "text",
+                  "text": "กำลังไปครับ",
+                  "flex": 9,
+                  "color": "#231F2099",
+                  "wrap": true,
+                  "size": "16px"
+                }
+              ],
+              "flex": 8
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": ">",
+                  "flex": 1,
+                  "align": "center",
+                  "color": "#231F2099",
+                  "size": "16px"
+                },
+                {
+                  "type": "text",
+                  "text": "เสื้อสีไรคับ",
+                  "flex": 9,
+                  "color": "#231F2099",
+                  "wrap": true,
+                  "size": "16px"
+                }
+              ],
+              "flex": 8
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": ">",
+                  "flex": 1,
+                  "align": "center",
+                  "color": "#231F2099",
+                  "size": "16px"
+                },
+                {
+                  "type": "text",
+                  "text": "ฝั่งไหนหรอครับ โซนโรงหนัง ",
+                  "flex": 9,
+                  "color": "#231F2099",
+                  "wrap": true,
+                  "size": "16px"
+                }
+              ],
+              "flex": 8
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": ">",
+                  "flex": 1,
+                  "align": "center",
+                  "color": "#231F2099",
+                  "size": "16px"
+                },
+                {
+                  "type": "text",
+                  "text": "ฝั่งติดกับที่ขายเครื่องดื่มคับ",
+                  "flex": 9,
+                  "color": "#231F2099",
+                  "wrap": true,
+                  "size": "16px"
+                }
+              ],
+              "flex": 8
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": ">",
+                  "flex": 1,
+                  "align": "center",
+                  "color": "#231F2099",
+                  "size": "16px"
+                },
+                {
+                  "type": "text",
+                  "text": "ฝั่ง Master Card Cinema ใช่มั้ยครับ ถึงละ",
+                  "flex": 9,
+                  "color": "#231F2099",
+                  "wrap": true,
+                  "size": "16px"
+                }
+              ],
+              "flex": 8
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": ">",
+                  "flex": 1,
+                  "align": "center",
+                  "color": "#231F2099",
+                  "size": "16px"
+                },
+                {
+                  "type": "text",
+                  "text": "อีกฝั่งคับ เงียบกว่าๆ",
+                  "flex": 9,
+                  "color": "#231F2099",
+                  "wrap": true,
+                  "size": "16px"
+                }
+              ],
+              "flex": 8
+            },
+            {
+              "type": "text",
+              "text": "ถึงละครับ แต่งตัวไงหรอครับ",
+              "color": "#231F20",
+              "wrap": true
+            }
+          ],
+          "paddingTop": "16px"
+        }
+      ],
+      "spacing": "3px",
+      "paddingStart": "25px",
+      "paddingEnd": "25px",
+      "paddingTop": "0px",
+      "paddingBottom": "30px"
+    },
+    "footer": {
+      "type": "box",
+      "layout": "horizontal",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "Reply",
+            "uri": "http://linecorp.com/"
+          },
+          "color": "#7C5295"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "Quote",
+            "text": "hello"
+          },
+          "color": "#7C5295"
+        }
+      ]
+    }
+}
