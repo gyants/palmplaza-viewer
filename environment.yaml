@@ -1,0 +1,8 @@
+name: palm-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ipykernel
+  - autopep8
+prefix: C:\Users\eSERVICE\.conda\envs\palm-env
