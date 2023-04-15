@@ -96,14 +96,19 @@ def parse_reply_data(reply):
     return replyinfo, time, body
 
 
-def read_replies(topic_url):
+def read_replies(topic):
     '''
     Read all replies in a topic
     '''
+    topic_name = topic['topic']
+    topic_url = topic['url']
+    topic_id = topic_url.split(
+        'https://www.palm-plaza.com/CCforum/DCForumID4/')[1].split('.')[0]
     replies = fetch_replies_table(topic_url)
     parsed_replies = []
     for reply in replies:
-        temp = {'author': '', 'number': '', 'time': '', 'message': ''}
+        temp = {'topic': topic_name, 'topic_id': topic_id,
+                'author': '', 'number': '', 'time': '', 'message': ''}
         try:
             replyinfo, time, body = parse_reply_data(reply)
             for br in body.find_all("br"):

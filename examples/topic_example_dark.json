@@ -1,0 +1,192 @@
+{
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "EViL",
+          "size": "32px",
+          "color": "#F5F5F5",
+          "weight": "bold"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Sort by Last Updated",
+              "color": "#F5F5F599",
+              "size": "xs"
+            },
+            {
+              "type": "text",
+              "text": "Page 1",
+              "align": "end",
+              "color": "#F5F5F599",
+              "gravity": "center",
+              "size": "xs"
+            }
+          ]
+        }
+      ],
+      "paddingBottom": "0px"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Topic",
+              "color": "#F5F5F5",
+              "flex": 6,
+              "weight": "bold"
+            },
+            {
+              "type": "text",
+              "text": "Replies",
+              "flex": 2,
+              "color": "#F5F5F5",
+              "align": "center",
+              "weight": "bold"
+            }
+          ],
+          "paddingBottom": "10px"
+        },
+        {
+          "type":"box",
+          "layout":"horizontal",
+          "contents":[
+             {
+                "type":"text",
+                "text":"Oasis สามัคคี",
+                "wrap":true,
+                "color":"#D49BF6",
+                "flex":6,
+                "gravity":"center",
+                "action":{
+                   "type":"uri",
+                   "uri":"https://www.palm-plaza.com/CCforum/DCForumID4/345366.html?11"
+                }
+             },
+             {
+                "type":"text",
+                "text":"11",
+                "flex":2,
+                "color":"#F5F5F5",
+                "align":"center",
+                "gravity":"center"
+             }
+          ],
+          "paddingBottom":"5px"
+       },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Summer hill พระโขนง",
+              "wrap": true,
+              "color": "#D49BF6",
+              "flex": 6,
+              "gravity": "center"
+            },
+            {
+              "type": "text",
+              "text": "13",
+              "flex": 2,
+              "color": "#F5F5F5",
+              "align": "center",
+              "gravity": "center"
+            }
+          ],
+          "paddingBottom": "5px"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Yspa ครับ",
+              "wrap": true,
+              "color": "#D49BF6",
+              "flex": 6,
+              "gravity": "center"
+            },
+            {
+              "type": "text",
+              "text": "0",
+              "flex": 2,
+              "color": "#F5F5F5",
+              "align": "center",
+              "gravity": "center"
+            }
+          ],
+          "paddingBottom": "5px"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "เวตเกต",
+              "wrap": true,
+              "color": "#D49BF6",
+              "flex": 6,
+              "gravity": "center"
+            },
+            {
+              "type": "text",
+              "text": "1",
+              "flex": 2,
+              "color": "#F5F5F5",
+              "align": "center",
+              "gravity": "center"
+            }
+          ],
+          "paddingBottom": "5px"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "อาคารจอดรถสนามบินสุวรรณภูมิ",
+              "wrap": true,
+              "color": "#D49BF6",
+              "flex": 6,
+              "gravity": "center"
+            },
+            {
+              "type": "text",
+              "text": "44",
+              "flex": 2,
+              "color": "#F5F5F5",
+              "align": "center",
+              "gravity": "center"
+            }
+          ],
+          "paddingBottom": "5px"
+        }
+      ]
+    },
+    "styles": {
+      "header": {
+        "backgroundColor": "#231F20"
+      },
+      "body": {
+        "backgroundColor": "#231F20"
+      }
+    }
+  }

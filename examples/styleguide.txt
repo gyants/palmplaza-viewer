@@ -1,6 +1,8 @@
 --------------------REPLY BUBBLE--------------------
+bubble
+    size: mega
 header
-    backgroundColor: #F5F5F5
+    backgroundColor: #FFFFFF
 
 header.text
     size: 24px

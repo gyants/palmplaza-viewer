@@ -1,0 +1,21 @@
+{
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "text",
+        "text": ">",
+        "flex": 1,
+        "color": "#F5F5F57B",
+        "size": "16px"
+      },
+      {
+        "type": "text",
+        "text": "Quote Message",
+        "flex": 9,
+        "color": "#F5F5F57B",
+        "wrap": true,
+        "size": "16px"
+      }
+    ]
+}
