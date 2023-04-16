@@ -13,7 +13,11 @@
           "size": "24px",
           "color": "#F5F5F5"
         }
-      ]
+      ],
+      "action": {
+        "type": "uri",
+        "uri": ""
+      }
     },
     "body": {
       "type": "box",

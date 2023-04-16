@@ -81,9 +81,10 @@ def fetch_replies_table(topic_url):
     response = requests.get(topic_url)
     soup = BeautifulSoup(response.content, 'html.parser',
                          from_encoding='tis-620')
+    title = soup.title.string.split('-')[2].strip()
     replies = soup.find_all(
         'table', border=0, width='100%', cellpadding=3, cellspacing=0)
-    return replies
+    return replies, title
 
 
 def parse_reply_data(reply):
@@ -100,11 +101,16 @@ def read_replies(topic):
     '''
     Read all replies in a topic
     '''
-    topic_name = topic['topic']
-    topic_url = topic['url']
-    topic_id = topic_url.split(
-        'https://www.palm-plaza.com/CCforum/DCForumID4/')[1].split('.')[0]
-    replies = fetch_replies_table(topic_url)
+    if 'www.palm-plaza.com' in topic:
+        topic_name = topic['topic']
+        topic_url = topic['url']
+        topic_id = topic_url.split(
+            'https://www.palm-plaza.com/CCforum/DCForumID4/')[1].split('.')[0]
+    else:
+
+        topic_url = 'https://www.palm-plaza.com/CCforum/DCForumID4/'+topic+'.html'
+        topic_id = topic
+    replies,topic_name = fetch_replies_table(topic_url)
     parsed_replies = []
     for reply in replies:
         temp = {'topic': topic_name, 'topic_id': topic_id,
@@ -118,10 +124,14 @@ def read_replies(topic):
             temp['number'] = 0 if num == '' else int(num)
             for i in time:
                 if 'Asia' in i.text:
+                    text = i.text
+                    text = text.replace('\xa0', ' ')
+                    text = text.replace(' (SE Asia Standard Time)','')
                     temp['time'] = datetime.strptime(
-                        i.text.strip(), "%d-%b-%y, %I:%M %p (%Z)")
+                        text.strip(), "%d-%b-%y, %I:%M %p")
             temp['message'] = body.text.strip()
             parsed_replies.append(temp)
-        except:
+        except Exception as e:
             pass
+            # print(e)
     return parsed_replies

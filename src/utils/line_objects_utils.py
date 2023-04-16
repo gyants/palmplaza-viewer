@@ -60,15 +60,17 @@ def topic_replies_box(topic_dict):
     template = load_topic_replies()
     name = topic_dict['topic']
     replies = topic_dict['replies']
-    link = topic_dict['url']
+    topic_id = topic_dict['url'].split(
+            'https://www.palm-plaza.com/CCforum/DCForumID4/')[1].split('.')[0]
     topic_name_dict = dict(type='text',
                            text=name,
                            #    wrap=True,
                            color="#D49BF6",
                            flex=6,
                            gravity='center',
-                           action=dict(type='uri',
-                                       uri=link))
+                           action=dict(type='postback',
+                                       data='action=read&id=%s'%topic_id)
+                            )
     replies_dict = dict(type='text',
                         text=str(replies),
                         flex=2,
@@ -136,6 +138,7 @@ def message_to_lines(message):
 def reply_bubble(reply_dict):
     template = load_reply_bubble()
     template['header']['contents'][0]['text'] = reply_dict['topic']
+    template['header']['action']['uri'] = 'https://www.palm-plaza.com/CCforum/DCForumID4/%s.html'%reply_dict['topic_id']
     template['body']['contents'][0]['text'] = reply_dict['author']
     template['body']['contents'][1]['contents'][0]['text'] += str(
         reply_dict['number'])
