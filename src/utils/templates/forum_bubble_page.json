@@ -17,7 +17,7 @@
                 "contents": [
                     {
                         "type": "text",
-                        "text": "Sort by Last Updated",
+                        "text": "เรียงตามการตอบกลับล่าสุด",
                         "color": "#F5F5F599",
                         "size": "xs",
                         "flex": 6
@@ -46,14 +46,14 @@
                 "contents": [
                     {
                         "type": "text",
-                        "text": "Topic",
+                        "text": "หัวข้อ(แตะเพื่อนอ่าน)",
                         "color": "#F5F5F5",
                         "flex": 6,
                         "weight": "bold"
                     },
                     {
                         "type": "text",
-                        "text": "Replies",
+                        "text": "ตอบกลับ",
                         "flex": 2,
                         "color": "#F5F5F5",
                         "align": "center",

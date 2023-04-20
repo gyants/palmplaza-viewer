@@ -9,7 +9,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "Partying Now!",
+            "text": "ปาร์ตี้มันส์ๆ!",
             "size": "xxl",
             "weight": "bold",
             "align": "center",
@@ -17,7 +17,7 @@
           },
           {
             "type": "text",
-            "text": "In your area",
+            "text": "ตอนนี้",
             "align": "center",
             "color": "#f5f5f5cc"
           }
@@ -34,14 +34,14 @@
             "contents": [
               {
                 "type": "text",
-                "text": "Name",
+                "text": "ชื่อปาร์ตี้",
                 "color": "#f5f5f5",
                 "weight": "bold",
                 "flex": 6
               },
               {
                 "type": "text",
-                "text": "Distance",
+                "text": "ระยะทาง",
                 "color": "#f5f5f5",
                 "weight": "bold",
                 "flex": 4,
@@ -49,30 +49,6 @@
               }
             ],
             "paddingBottom": "10px"
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "ctw ชั้น 15",
-                "color": "#D49BF6",
-                "flex": 6
-              },
-              {
-                "type": "text",
-                "text": "999m",
-                "color": "#D49BF6",
-                "weight": "regular",
-                "flex": 4,
-                "align": "center"
-              }
-            ],
-            "action": {
-              "type": "postback",
-              "data": "party/view/id"
-            }
           }
         ]
       },
@@ -93,7 +69,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "START A NEW PARTY!",
+            "text": "เปิดปาร์ตี้ ใหม่เลย!",
             "color": "#f5f5f5",
             "weight": "bold",
             "size": "4xl",
@@ -111,7 +87,7 @@
             "type": "button",
             "action": {
               "type": "postback",
-              "data": "party/startparty",
+              "data": "action=party&id=startparty",
               "label": "Let's Go! >"
             },
             "color": "#D49BF6",

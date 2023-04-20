@@ -1,0 +1,24 @@
+{
+    "type":"box",
+    "layout":"horizontal",
+    "contents":[
+       {
+          "type":"text",
+          "text":"%",
+          "color":"#D49BF6",
+          "flex":6
+       },
+       {
+          "type":"text",
+          "text":"%m",
+          "color":"#D49BF6",
+          "weight":"regular",
+          "flex":4,
+          "align":"center"
+       }
+    ],
+    "action":{
+       "type":"postback",
+       "data":"action=viewparty&id=%"
+    }
+ }

@@ -27,3 +27,4 @@ ENV/
 # Other
 *.pyc
 .DS_Store
+*.db

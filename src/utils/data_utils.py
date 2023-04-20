@@ -1,3 +1,6 @@
+import sqlite3
+
+
 def sort_by(dict_list, key, descending=True):
     '''
     Sort data in a list by a key in the dictionaries 
@@ -38,3 +41,8 @@ def extract_topics_id(dict_list):
         ids.append(fields)
 
     return ids
+
+
+def connect_database():
+    conn = sqlite3.connect('Cruisr.db')
+    return conn

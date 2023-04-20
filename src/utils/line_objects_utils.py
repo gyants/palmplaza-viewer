@@ -8,25 +8,25 @@ file_path = sys.path[0]
 def time_ago(dt):
     delta = datetime.now() - dt
     if delta < timedelta(minutes=1):
-        return 'just now'
+        return 'เมื่อกี้'
     elif delta < timedelta(hours=1):
         minutes = delta.seconds // 60
         if minutes == 1:
-            return '1 minute ago'
+            return '1 นาทีที่แล้ว'
         else:
-            return f'{minutes} minutes ago'
+            return f'{minutes} นาทีที่แล้ว'
     elif delta < timedelta(days=1):
         hours = delta.seconds // 3600
         if hours == 1:
-            return '1 hour ago'
+            return '1 ชั่วโมงก่อน'
         else:
-            return f'{hours} hours ago'
+            return f'{hours} ชั่วโมงที่แล้ว'
     else:
         days = delta.days
         if days == 1:
-            return '1 day ago'
+            return '1 วันที่แล้ว'
         else:
-            return f'{days} days ago'
+            return f'{days} วันที่แล้ว'
 
 
 def load_topic_replies():
@@ -55,6 +55,12 @@ def load_reply_bubble():
     with open(path) as fp:
         return json.load(fp)
 
+
+def load_party_menu_carousel():
+    path = os.path.join(file_path, 'utils', 'templates',
+                        'party_menu_carousel.json')
+    with open(path) as fp:
+        return json.load(fp)
 
 def topic_replies_box(topic_dict):
     template = load_topic_replies()
@@ -107,7 +113,7 @@ def forum_carousel(dict_list):
         bubble = load_forum_bubble_page()
         for topic in page:
             bubble['body']['contents'].append(topic)
-        bubble['header']['contents'][1]['contents'][1]['text'] = 'Page %d' % (
+        bubble['header']['contents'][1]['contents'][1]['text'] = 'หน้า %d' % (
             current_page)
         current_page += 1
         carousel['contents'].append(bubble)
@@ -160,3 +166,9 @@ def reply_carousel(dict_list):
         carousel['contents'].append(bubble)
 
     return carousel
+
+
+def party_carousel():
+    carousel = load_party_menu_carousel()
+    return carousel
+

@@ -13,7 +13,7 @@ import requests
 import json
 from utils.web_scraper import get_topics, read_replies
 from utils.data_utils import sort_by, extract_field, extract_topics_id
-from utils.line_objects_utils import reply_carousel, forum_carousel
+from utils.line_objects_utils import reply_carousel, forum_carousel, party_carousel
 
 from dotenv import load_dotenv
 import os
@@ -27,7 +27,6 @@ CHANNEL_SECRET = os.getenv("CHANNEL_SECRET")
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(CHANNEL_SECRET)
 parser = WebhookParser(CHANNEL_SECRET)
-
 
 @app.route("/webhook", methods=['POST'])
 def callback():
@@ -49,7 +48,7 @@ def callback():
             if event.message.text.startswith('read'):
                 identifier = event.message.text.split('read')[1].strip()
                 replies = read_replies(identifier)
-                replies = sort_by(replies, 'number')
+                replies = sort_by(replies, 'number', descending=False)
                 carousel = reply_carousel(replies)
                 line_bot_api.reply_message(
                     event.reply_token,
@@ -58,27 +57,45 @@ def callback():
                 )
             else:
                 all_topics = get_topics()
-                carousel = forum_carousel(all_topics)
+                temp_topics = []
+                for topic in all_topics:
+                    if event.message.text in topic['topic']:
+                        temp_topics.append(topic)
+                carousel = forum_carousel(temp_topics)
                 line_bot_api.reply_message(
-                    event.reply_token,
-                    FlexSendMessage(alt_text='Forum',
-                                    contents=carousel)
-                )
+                        event.reply_token,
+                        FlexSendMessage(alt_text='Forum',
+                                        contents=carousel)
+                    )
 
         if event.type == 'postback':
             data = event.postback.data.split('&')
             action, identifier = data[0].split('=')[1], data[1].split('=')[1]
             if action == 'read':
                 replies = read_replies(identifier)
-                replies = sort_by(replies, 'number')
+                replies = sort_by(replies, 'number', descending=False)
                 carousel = reply_carousel(replies)
                 line_bot_api.reply_message(
                     event.reply_token,
                     FlexSendMessage(alt_text='Replies',
                                     contents=carousel)
                 )
-            
-
+            elif action == 'menu':
+                if identifier == 'palmplaza':
+                    all_topics = get_topics()
+                    carousel = forum_carousel(all_topics)
+                    line_bot_api.reply_message(
+                        event.reply_token,
+                        FlexSendMessage(alt_text='Forum',
+                                        contents=carousel)
+                    )
+                elif identifier == 'partymenu':
+                    carousel = party_carousel()
+                    line_bot_api.reply_message(
+                        event.reply_token,
+                        FlexSendMessage(alt_text='Party!',
+                                        contents=carousel)
+                    )
     return 'OK'
 
 
