@@ -68,14 +68,16 @@ def callback():
         if event.type == 'postback':
             data = event.postback.data.split('&')
             action, identifier = data[0].split('=')[1], data[1].split('=')[1]
-            replies = read_replies(identifier)
-            replies = sort_by(replies, 'number')
-            carousel = reply_carousel(replies)
-            line_bot_api.reply_message(
-                event.reply_token,
-                FlexSendMessage(alt_text='Replies',
-                                contents=carousel)
-            )
+            if action == 'read':
+                replies = read_replies(identifier)
+                replies = sort_by(replies, 'number')
+                carousel = reply_carousel(replies)
+                line_bot_api.reply_message(
+                    event.reply_token,
+                    FlexSendMessage(alt_text='Replies',
+                                    contents=carousel)
+                )
+            
 
     return 'OK'
 
